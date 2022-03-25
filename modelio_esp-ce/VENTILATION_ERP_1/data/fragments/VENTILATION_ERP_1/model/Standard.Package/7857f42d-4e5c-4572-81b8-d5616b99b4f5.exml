@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="archi logiciel" version="4">
+  <OBJECT>
+    <ID name="archi logiciel" mc="Standard.Package" uid="7857f42d-4e5c-4572-81b8-d5616b99b4f5"/>
+    <PID name="ventilation_erp_1" mc="Standard.Package" uid="f5e59daa-cdbe-4ed9-95ce-089b2c9a9127"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[archi logiciel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Activity" mc="Standard.Activity" uid="24c9785e-dfdb-46ec-9806-ed6730519df7"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

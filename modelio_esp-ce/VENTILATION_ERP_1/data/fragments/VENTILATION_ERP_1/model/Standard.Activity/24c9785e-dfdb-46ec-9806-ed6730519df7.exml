@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Activity" version="4">
+  <OBJECT>
+    <ID name="Activity" mc="Standard.Activity" uid="24c9785e-dfdb-46ec-9806-ed6730519df7"/>
+    <PID name="archi logiciel" mc="Standard.Package" uid="7857f42d-4e5c-4572-81b8-d5616b99b4f5"/>
+    <ATTRIBUTES>
+      <ATT name="IsSingleExecution">false</ATT>
+      <ATT name="IsReadOnly">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Activity]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedNode">
+        <OBJECT>
+          <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="5b4fc1bd-4009-4170-8902-9a5cfc66866e"/>
+          <ATTRIBUTES>
+            <ATT name="IsCombineDuplicate">true</ATT>
+            <ATT name="JoinSpec"><![CDATA[and]]></ATT>
+            <ATT name="Name"><![CDATA[Fork/Join]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Fork/Join1" mc="Standard.ForkJoinNode" uid="eea92d74-cba5-4e11-b03b-dc95736f4473"/>
+          <ATTRIBUTES>
+            <ATT name="IsCombineDuplicate">true</ATT>
+            <ATT name="JoinSpec"><![CDATA[and]]></ATT>
+            <ATT name="Name"><![CDATA[Fork/Join1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="thread_hygro_temp" mc="Standard.LoopNode" uid="21db5b6f-e3fa-42b3-8ccf-86514e3cba0e"/>
+          <ATTRIBUTES>
+            <ATT name="IsTestedFirst">false</ATT>
+            <ATT name="Setup"><![CDATA[fin_demandé = false]]></ATT>
+            <ATT name="Test"><![CDATA[while : !fin_demandé]]></ATT>
+            <ATT name="MustIsolate">false</ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[thread_hygro_temp]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Body">
+              <OBJECT>
+                <ID name="recuperation donné AM2301+ envoie class com" mc="Standard.OpaqueAction" uid="0d6f7eac-4a30-495b-afb8-7b70e649eef5"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[recuperation donné AM2301+ envoie class com]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="thread_co2" mc="Standard.LoopNode" uid="5b92e04b-ef29-47d5-8225-2d003ac031f9"/>
+          <ATTRIBUTES>
+            <ATT name="IsTestedFirst">true</ATT>
+            <ATT name="Setup"><![CDATA[fin_demandé = false]]></ATT>
+            <ATT name="Test"><![CDATA[while : !fin_demandé]]></ATT>
+            <ATT name="MustIsolate">false</ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[thread_co2]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Body">
+              <OBJECT>
+                <ID name="recuperation donné mh19z + envoie a la class com" mc="Standard.OpaqueAction" uid="d2a5d893-a972-4f2c-9e46-85c684885602"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[recuperation donné mh19z + envoie a la class com]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="lancement thread " mc="Standard.OpaqueAction" uid="fdbd5e2b-e199-4187-a7e6-2cca6c4fc5d5"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[lancement thread ]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="420bb635-b583-445e-96f0-b91f53611b84"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Fork/Join1" mc="Standard.ForkJoinNode" uid="eea92d74-cba5-4e11-b03b-dc95736f4473"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="fin thread" mc="Standard.OpaqueAction" uid="3a2c8577-c220-4272-b2df-715459437514"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[fin thread]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Standard.Collaboration" uid="d50e6f27-e6c3-495d-b6e2-2fba6a8b78dc"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagramme d'activité Activity" mc="Standard.ActivityDiagram" uid="1b6defb1-2c29-4bda-bd80-5c9a00eb9284"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

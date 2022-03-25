@@ -100,66 +100,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="recuperation grandeur phys co2+temp" mc="Standard.OpaqueAction" uid="10eeb0cd-9d38-485a-970a-a27f6ff475f2"/>
-          <ATTRIBUTES>
-            <ATT name="Body"></ATT>
-            <ATT name="IsMultipleInstance">false</ATT>
-            <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[recuperation grandeur phys co2+temp]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Outgoing">
-              <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="abb69309-c585-41dd-825e-ba60506a6938"/>
-                <ATTRIBUTES>
-                  <ATT name="Guard"></ATT>
-                  <ATT name="Weight"><![CDATA[1]]></ATT>
-                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Target">
-                    <REFOBJ>
-                      <ID name="recuperation grandeur phys hygro+temp" mc="Standard.OpaqueAction" uid="1ba63f7e-8b98-4e20-b175-fa15ae071105"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="recuperation grandeur phys hygro+temp" mc="Standard.OpaqueAction" uid="1ba63f7e-8b98-4e20-b175-fa15ae071105"/>
-          <ATTRIBUTES>
-            <ATT name="Body"></ATT>
-            <ATT name="IsMultipleInstance">false</ATT>
-            <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[recuperation grandeur phys hygro+temp]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Outgoing">
-              <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c3053762-67a0-4241-9597-095d90e01f34"/>
-                <ATTRIBUTES>
-                  <ATT name="Guard"></ATT>
-                  <ATT name="Weight"><![CDATA[1]]></ATT>
-                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Target">
-                    <REFOBJ>
-                      <ID name="envoie grandeur bdd" mc="Standard.OpaqueAction" uid="9455b36c-945c-448d-936e-33b19933de39"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="baf47e4b-014c-43e2-8ac0-06805bebb2c4"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
@@ -223,9 +163,9 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="3dfa4710-89c2-4952-a341-08ce060a2606"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f95da6c7-a191-4dc6-ab89-120d65278ee8"/>
                 <ATTRIBUTES>
-                  <ATT name="Guard"><![CDATA[!ok]]></ATT>
+                  <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
                   <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -233,15 +173,15 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="connexion bdd" mc="Standard.OpaqueAction" uid="20221d7c-46c2-4afd-8094-246f089b396d"/>
+                      <ID name="recup grandeur phys depuis classe com" mc="Standard.OpaqueAction" uid="9a75f524-d9f9-466d-b8a9-aa25a7b1d78d"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f571c82c-eb27-485d-80a0-643cc87a46ea"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="dbae0fec-a890-466c-abe0-be3a8177e3da"/>
                 <ATTRIBUTES>
-                  <ATT name="Guard"><![CDATA[ok]]></ATT>
+                  <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
                   <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -249,7 +189,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="recuperation grandeur phys co2+temp" mc="Standard.OpaqueAction" uid="10eeb0cd-9d38-485a-970a-a27f6ff475f2"/>
+                      <ID name="alumage led err + sleep 200ms" mc="Standard.OpaqueAction" uid="31bdc695-b3f7-48ba-80c0-92cae969feeb"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -308,7 +248,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="alumage led err" mc="Standard.OpaqueAction" uid="31bdc695-b3f7-48ba-80c0-92cae969feeb"/>
+                      <ID name="alumage led err + sleep 200ms" mc="Standard.OpaqueAction" uid="31bdc695-b3f7-48ba-80c0-92cae969feeb"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -333,18 +273,18 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="alumage led err" mc="Standard.OpaqueAction" uid="31bdc695-b3f7-48ba-80c0-92cae969feeb"/>
+          <ID name="alumage led err + sleep 200ms" mc="Standard.OpaqueAction" uid="31bdc695-b3f7-48ba-80c0-92cae969feeb"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
             <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[alumage led err]]></ATT>
+            <ATT name="Name"><![CDATA[alumage led err + sleep 200ms]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="10df582e-e363-4df3-81ed-00f00d43ec32"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="1776cad2-0241-41b7-9dd7-3d269a8fae48"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -355,6 +295,36 @@
                   <LINK relation="Target">
                     <REFOBJ>
                       <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="baf47e4b-014c-43e2-8ac0-06805bebb2c4"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="recup grandeur phys depuis classe com" mc="Standard.OpaqueAction" uid="9a75f524-d9f9-466d-b8a9-aa25a7b1d78d"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[recup grandeur phys depuis classe com]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="5a9e2a76-f366-4009-b5fd-5057df705215"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="envoie grandeur bdd" mc="Standard.OpaqueAction" uid="9455b36c-945c-448d-936e-33b19933de39"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>

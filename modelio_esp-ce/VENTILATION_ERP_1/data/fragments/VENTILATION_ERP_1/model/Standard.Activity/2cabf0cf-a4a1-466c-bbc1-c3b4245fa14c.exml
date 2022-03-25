@@ -118,22 +118,6 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="2f9e81d2-ed52-4602-97a9-8ad3e1e8989f"/>
-                <ATTRIBUTES>
-                  <ATT name="Guard"><![CDATA[!reçu]]></ATT>
-                  <ATT name="Weight"><![CDATA[1]]></ATT>
-                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Target">
-                    <REFOBJ>
-                      <ID name="envoie signal de lecture" mc="Standard.OpaqueAction" uid="306364ac-8d8d-4f34-bce8-478812fe6c76"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c591d567-d2ef-4735-a965-b6e7c15b46d3"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[reçu]]></ATT>
@@ -145,6 +129,22 @@
                   <LINK relation="Target">
                     <REFOBJ>
                       <ID name="verif checksum" mc="Standard.OpaqueAction" uid="3f41f9cb-d5aa-4edc-bedf-e6ba2b304111"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c258d8a1-d937-4615-b054-7af48d83abf0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[!recu]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="alumage led err" mc="Standard.OpaqueAction" uid="877a47d3-9247-45fd-b632-71408da36be0"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -204,7 +204,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="c7b03ecc-3401-4035-8b6a-10c0dae31fe9"/>
+                      <ID name="envoie val thread com" mc="Standard.OpaqueAction" uid="582df2c4-afd2-40a4-8aaa-a2b1987957df"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -223,9 +223,55 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="6a7e1ce9-b358-4e44-86fc-3857f644def7"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="36bee091-9d5f-499e-b8b9-2de9f863b27c"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[ok]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="convertisement en int " mc="Standard.OpaqueAction" uid="871e71f8-bcbc-41ad-a9b4-675bf36ac314"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="dbc12438-3cb8-4e61-bdcf-315772454a39"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[!ok]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="alumage led err" mc="Standard.OpaqueAction" uid="877a47d3-9247-45fd-b632-71408da36be0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="alumage led err" mc="Standard.OpaqueAction" uid="877a47d3-9247-45fd-b632-71408da36be0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[alumage led err]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="9e970864-324f-4f24-98e2-bdbeb308217e"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
                   <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -238,10 +284,24 @@
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="envoie val thread com" mc="Standard.OpaqueAction" uid="582df2c4-afd2-40a4-8aaa-a2b1987957df"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[envoie val thread com]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="36bee091-9d5f-499e-b8b9-2de9f863b27c"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c9bbfcd8-d7d1-4196-8850-01f00eac31c6"/>
                 <ATTRIBUTES>
-                  <ATT name="Guard"><![CDATA[ok]]></ATT>
+                  <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
                   <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -249,7 +309,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="convertisement en int " mc="Standard.OpaqueAction" uid="871e71f8-bcbc-41ad-a9b4-675bf36ac314"/>
+                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="c7b03ecc-3401-4035-8b6a-10c0dae31fe9"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>

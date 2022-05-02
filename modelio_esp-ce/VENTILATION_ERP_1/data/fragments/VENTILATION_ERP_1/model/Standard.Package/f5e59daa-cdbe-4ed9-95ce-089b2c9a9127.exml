@@ -19,6 +19,8 @@
       <COMP relation="OwnedElement">
         <COMPID name="recup donnée" mc="Standard.Package" uid="7bdff332-8e4a-437e-80bf-92584c376de2"/>
         <COMPID name="archi logiciel" mc="Standard.Package" uid="7857f42d-4e5c-4572-81b8-d5616b99b4f5"/>
+        <COMPID name="class" mc="Standard.Package" uid="7d154fcf-ce43-446a-9826-834032ffaf54"/>
+        <COMPID name="sequence" mc="Standard.Package" uid="8d7df118-dbc6-47b0-8982-fcc682453bb7"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>
